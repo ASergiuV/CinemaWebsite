@@ -12,21 +12,18 @@ use Model\Repository\Database;
 
 require './vendor/autoload.php';
 
-function main()
-{
-    try {
-        $db        = new Database();
-        $db        = $db->getConnection();
-        $movieCtrl = new MovieController($db);
-        $userCtrl  = new UserController($db);
-        $app       = new Application($movieCtrl, $userCtrl);
 
-        $app->listen();
-    } catch (Exception $e) {
-        echo $e->getMessage();
-    }
+try {
+    $db        = new Database();
+    $db        = $db->getConnection();
+    $movieCtrl = new MovieController($db);
+    $userCtrl  = new UserController($db);
+    $app       = new Application($movieCtrl, $userCtrl);
+
+    $app->listen();
+} catch (Exception $e) {
+    echo $e->getMessage();
 }
 
-main();
 
 

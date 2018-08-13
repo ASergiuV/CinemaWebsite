@@ -15,9 +15,9 @@ class JsonResponse extends Response
     /**
      * JsonResponse constructor.
      *
-     * @param string $content
+     * @param array $content
      */
-    public function __construct(string $content)
+    public function __construct(array $content)
     {
         parent::__construct(json_encode($content));
     }
@@ -27,7 +27,7 @@ class JsonResponse extends Response
      */
     public function setContent(string $content) : void
     {
-        $this->content = json_encode($content);
+        $this->content = $content;
     }
 
 

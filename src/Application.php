@@ -31,7 +31,11 @@ class Application
     public function listen()
     {
         if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] === 'http://www.cinema.local/login') {
-            $this->handleLoginSubmit($_POST);
+            if (count($_POST) !== 0) {
+                $this->handleLoginSubmit($_POST);
+
+                return;
+            }
         }
         $pathArray = explode('/', trim($_SERVER['REQUEST_URI'], '/'));
         if (count($pathArray) === 1 && $pathArray[0] === '') {
@@ -63,7 +67,7 @@ class Application
     {
         switch (count($pathArray)) {
             case 1:
-                $this->userController->getAll();
+                echo $this->userController->getAll()->getContent();
                 break;
             case 2:
                 if (!is_numeric($pathArray[1])) {
@@ -99,14 +103,28 @@ class Application
     private function handleLoginSubmit(array $post)
     {
         if (count($post) === 3) {
-            //asta inseamna login
-            //prima pozitie e mail
-            //a doua e password si a 3a e 'Log In'
+            if ($this->userController->checkEmailAndPassword($post['email'], $post['password'])) {
+                session_start();
+                //require 'web-src/home.html';
+                header('Location: http://www.cinema.local/');
+
+            }
+
             return;
         }
-        //asta inseamna register
-        //prima pozitie e mail
-        //a doua e password si a 3a e confirm password si a 4a e Register Now
+        if ($this->userController->checkUserEmailExist($post['email'])) {
+            echo "E-mail is already in use";
+
+            return;
+        }
+        if ($post['password'] !== $post['confirm-password']) {
+            echo "Passwords do not match";
+
+            return;
+        }
+        $this->userController->addUser($post['email'], $post['password']);
+        session_start();
+        require 'web-src/home.html';
 
     }
 }

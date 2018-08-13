@@ -9,18 +9,35 @@
 namespace Model\Repository;
 
 
-class UserRepository
-{
-    private $dbconn;
+use PDO;
 
+class UserRepository extends Repository
+{
     /**
-     * UserRepository constructor.
+     * @param $email
+     * @param $password
      *
-     * @param $dbconn
+     * @return bool
      */
-    public function __construct($dbconn)
+    public function checkEmailAndPassword($email, $password)
     {
-        $this->dbconn = $dbconn;
+        $stmt = $this->connection->query("SELECT password FROM USER WHERE email = " . $this->connection->quote($email));
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
+
+        return in_array($password, $result[0]);
     }
 
+    /**
+     * @param $email
+     *
+     * @return bool
+     */
+    public function checkEmailExist($email) : bool
+    {
+        $stmt = $this->connection->query("SELECT * FROM USER WHERE email = " . $this->connection->quote($email));
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+        return count($stmt->fetchAll()) > 0 ? true : false;
+    }
 }

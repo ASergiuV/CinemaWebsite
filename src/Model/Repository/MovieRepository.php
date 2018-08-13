@@ -8,18 +8,37 @@
 
 namespace Model\Repository;
 
-class MovieRepository
-{
-    private $dbconn;
+use Model\Domain\Movie;
+use PDO;
 
-    /**
-     * MovieRepository constructor.
-     *
-     * @param $dbconn
-     */
-    public function __construct($dbconn)
+class MovieRepository extends Repository
+{
+    private $genreRepo;
+
+    public function __construct(PDO $dbconn)
     {
-        $this->dbconn = $dbconn;
+        parent::__construct($dbconn);
+        $this->genreRepo = new GenreRepository($dbconn);
+    }
+
+    public function findAll($tableName)
+    {
+        $movieArray  = parent::findAll($tableName);
+        $genreArray  = $this->genreRepo->findAll('GENRE');
+        $returnArray = [];
+        foreach ($movieArray as $movie) {
+            $currentMovieGenre = [];
+            foreach ($genreArray as $genre) {
+                if (in_array($genre['id'], explode(',', $movie['genre']))) {
+                    $currentMovieGenre[] = $genre['name'];
+                }
+            }
+            $returnArray[] = new Movie($movie['id'], $movie['name'], $movie['year'], $movie['image'],
+                $currentMovieGenre);
+        }
+
+        return $returnArray;
+
     }
 
 }

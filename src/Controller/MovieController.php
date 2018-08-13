@@ -27,7 +27,7 @@ class MovieController
 
     public function getAll()
     {
-        echo "MovieController->getALL()";
+        return $this->movieRepository->findAll('USER');
     }
 
     public function getOneById(int $id)
