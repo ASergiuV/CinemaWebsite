@@ -1,0 +1,16 @@
+{
+  "name": "sergiuabrudean/cinema",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abrudean Sergiu",
+      "email": "sergiu.abrudean@evozon.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}

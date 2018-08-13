@@ -1,0 +1,10 @@
+/*********************************
+* Inserting values into a table *
+*********************************/
+INSERT INTO `product` (`name`, `price`)
+VALUES ('Programmer', 1000000), ('Dictator', 150), ('Athlete', 180.50),
+  ('Scientist', 200), ('Cat', 1500), ('Horror from beyond spacetime', 9000), ('Jewel-covered bridge troll', 200),
+  ('Mother of Mechanical Beetles', 3000), ('Father of Weaponized Hedgehogs', 3000), ('Death', 1500),
+  ('Fire-breathing fruitfly', 20), ('Time golem', 4000), ('Dark Lord', 2000), ('Dark Queen', 2000),
+  ('Mildly dim knight with heart of gold', 5), ('Evil witch with dark dark dark intentions', 750),
+  ('Half-wyvern half-library', 3000), ('Scientist', 700), ('Failed scientific experiment', 1);
