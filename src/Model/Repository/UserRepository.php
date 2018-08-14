@@ -9,6 +9,7 @@
 namespace Model\Repository;
 
 
+use Model\Domain\User;
 use PDO;
 
 class UserRepository extends Repository
@@ -39,5 +40,16 @@ class UserRepository extends Repository
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
         return count($stmt->fetchAll()) > 0 ? true : false;
+    }
+
+    public function findAll(string $tableName)
+    {
+        $userArray   = parent::findAll($tableName);
+        $returnArray = [];
+        foreach ($userArray as $user) {
+            $returnArray[] = new User($user['id'], $user['email'], $user['password']);
+        }
+
+        return $returnArray;
     }
 }

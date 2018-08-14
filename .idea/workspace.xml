@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eddef9f3-5029-4eab-ae01-30fb4e93ec26" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/Booking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Genre.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/Movie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Room.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/Room.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Seat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/Seat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Showtime.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/Showtime.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Repository/MovieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Repository/MovieRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Repository/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Repository/Repository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Repository/UserRepository.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -175,20 +164,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console_1.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1b7752b9-d446-4102-8f5d-fec34caa7aa2/console_1.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Domain/User.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
-              <caret line="71" column="10" selection-end-line="75" />
+              <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
               <folding>
                 <element signature="e#202#308#0#PHP" expanded="true" />
                 <element signature="e#886#1178#0#PHP" expanded="true" />
@@ -197,14 +177,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/MovieController.php">
+      <file leaf-file-name="UserRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/Repository/UserRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+            <state relative-caret-position="313">
+              <caret line="52" column="28" selection-end-line="55" />
               <folding>
-                <element signature="e#122#159#0#PHP" expanded="true" />
+                <element signature="e#128#150#0#PHP" expanded="true" />
+                <element signature="e#184#267#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Repository/Repository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="158" column="35" lean-forward="true" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -256,7 +246,6 @@
         <option value="$PROJECT_DIR$/src/Model/Repository/ShowtimeRepository.php" />
         <option value="$PROJECT_DIR$/src/Util/HTTP/Response.php" />
         <option value="$PROJECT_DIR$/src/Util/HTTP/JsonResponse.php" />
-        <option value="$PROJECT_DIR$/src/Model/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/src/Controller/UserController.php" />
@@ -282,6 +271,7 @@
         <option value="$PROJECT_DIR$/src/Model/Domain/Seat.php" />
         <option value="$PROJECT_DIR$/src/Model/Domain/Showtime.php" />
         <option value="$PROJECT_DIR$/src/Model/Domain/User.php" />
+        <option value="$PROJECT_DIR$/src/Model/Repository/UserRepository.php" />
       </list>
     </option>
   </component>
@@ -430,12 +420,12 @@
       <updated>1533296746139</updated>
       <workItem from="1533296747405" duration="4904000" />
       <workItem from="1533543550779" duration="31000" />
-      <workItem from="1533558690168" duration="53578000" />
+      <workItem from="1533558690168" duration="53783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58513000" />
+    <option name="totallyTimeSpent" value="58718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
@@ -635,17 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#184#267#0#PHP" expanded="true" />
-            <element signature="e#570#629#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdminScripts/readCSV.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -809,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Repository/Repository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="158" column="35" lean-forward="true" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Repository/MovieRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -933,10 +905,28 @@
     <entry file="file://$PROJECT_DIR$/src/Model/Domain/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
-          <caret line="71" column="10" selection-end-line="75" />
+          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
           <folding>
             <element signature="e#202#308#0#PHP" expanded="true" />
             <element signature="e#886#1178#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Repository/Repository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="158" column="35" lean-forward="true" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Repository/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="52" column="28" selection-end-line="55" />
+          <folding>
+            <element signature="e#128#150#0#PHP" expanded="true" />
+            <element signature="e#184#267#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
