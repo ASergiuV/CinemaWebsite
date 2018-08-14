@@ -2,6 +2,7 @@
 
 use Controller\MovieController;
 use Controller\UserController;
+use Util\EncryptionHandler;
 
 /**
  * Created by PhpStorm.
@@ -103,9 +104,9 @@ class Application
     private function handleLoginSubmit(array $post)
     {
         if (count($post) === 3) {
-            if ($this->userController->checkEmailAndPassword($post['email'], $post['password'])) {
+            if ($this->userController->checkEmailAndPassword($post['email'],
+                EncryptionHandler::encrypt($post['password']))) {
                 session_start();
-                //require 'web-src/home.html';
                 header('Location: http://www.cinema.local/');
             }
             echo "<script>
@@ -116,16 +117,23 @@ class Application
             return;
         }
         if ($this->userController->checkUserEmailExist($post['email'])) {
-            echo "E-mail is already in use";
+            echo "<script>
+                alert('E-mail is already in use');
+                </script>";
+            header('Refresh: 0; URL=http://www.cinema.local/login');
 
             return;
         }
         if ($post['password'] !== $post['confirm-password']) {
-            echo "Passwords do not match";
+            echo "<script>
+                alert('Passwords do not match');
+                </script>";
+            header('Refresh: 0; URL=http://www.cinema.local/login');
+
 
             return;
         }
-        $this->userController->addUser($post['email'], $post['password']);
+        $this->userController->addUser($post['email'], EncryptionHandler::encrypt($post['password']));
         session_start();
         header('Location: http://www.cinema.local/');
 
