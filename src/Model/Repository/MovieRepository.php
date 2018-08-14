@@ -46,4 +46,28 @@ class MovieRepository extends Repository
 
     }
 
+    public function find(int $id, $tableName = 'MOVIE')
+    {
+        $movieArray      = parent::find($id, $tableName);
+        $genreArray      = $this->genreRepo->findAll('GENRE');
+        $movieGenreArray = $this->genreRepo->findAll('GENRE_MOVIE');
+        $returnArray     = [];
+        foreach ($movieArray as $movie) {
+            $currentMovieGenre = [];
+            foreach ($movieGenreArray as $movieGenre) {
+                if (in_array($movieGenre['movie_id'], explode(',', $movie['id']))) {
+                    foreach ($genreArray as $genre) {
+                        if ($genre['id'] === $movieGenre['genre_id']) {
+                            $currentMovieGenre[] = $genre['name'];
+                        }
+                    }
+                }
+            }
+            $returnArray[] = new Movie($movie['id'], $movie['name'], $movie['year'], $movie['image'],
+                $currentMovieGenre);
+        }
+
+        return $returnArray;
+
+    }
 }

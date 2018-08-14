@@ -9,7 +9,7 @@
 namespace Model\Domain;
 
 
-class Booking
+class Booking implements \JsonSerializable
 {
     private $id;
     private $showtime;
@@ -65,4 +65,20 @@ class Booking
         return $this->seat;
     }
 
+    /**
+     * Specify data which should be serialized to JSON
+     * @link  http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'id' => $this->getId(),
+            'showtime' => json_encode($this->getShowtime()),
+            'user' => json_encode($this->getUser()),
+            'seat' => json_encode($this->getSeat())
+        ];
+    }
 }

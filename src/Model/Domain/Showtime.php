@@ -11,7 +11,7 @@ namespace Model\Domain;
 
 use DateTime;
 
-class Showtime
+class Showtime implements \JsonSerializable
 {
     private $id;
     private $datetime;
@@ -26,7 +26,7 @@ class Showtime
      * @param Movie $movie
      * @param Room $room
      */
-    public function __construct(int $id, DateTime $datetime, Movie $movie, Room $room)
+    public function __construct(int $id, string $datetime, Movie $movie, Room $room)
     {
         $this->id       = $id;
         $this->datetime = $datetime;
@@ -53,7 +53,7 @@ class Showtime
     /**
      * @return DateTime
      */
-    public function getDatetime() : DateTime
+    public function getDatetime() : string
     {
         return $this->datetime;
     }
@@ -66,4 +66,20 @@ class Showtime
         return $this->movie;
     }
 
+    /**
+     * Specify data which should be serialized to JSON
+     * @link  http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'id' => $this->getId(),
+            'datetime' => $this->getDatetime(),
+            'movie' => json_encode($this->getMovie()),
+            'room' => json_encode($this->getRoom())
+        ];
+    }
 }

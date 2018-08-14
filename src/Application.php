@@ -74,7 +74,7 @@ class Application
                 if (!is_numeric($pathArray[1])) {
                     break;
                 }
-                $this->userController->getOneById($pathArray[1]);
+                echo $this->userController->getOneById((int)$pathArray[1])->getContent();
                 break;
             default:
                 require 'web-src/404.html';
@@ -86,13 +86,13 @@ class Application
     {
         switch (count($pathArray)) {
             case 1:
-                $this->movieController->getAll();
+                echo $this->movieController->getAll()->getContent();
                 break;
             case 2:
                 if (!is_numeric($pathArray[1])) {
                     break;
                 }
-                $this->movieController->getOneById($pathArray[1]);
+                echo $this->movieController->getOneById((int)$pathArray[1])->getContent();
                 break;
 
             default:

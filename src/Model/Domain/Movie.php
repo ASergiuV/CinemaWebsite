@@ -9,7 +9,7 @@
 namespace Model\Domain;
 
 
-class Movie
+class Movie implements \JsonSerializable
 {
     private $id;
     private $name;
@@ -76,4 +76,21 @@ class Movie
         return $this->genres;
     }
 
+    /**
+     * Specify data which should be serialized to JSON
+     * @link  http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'id' => $this->getId(),
+            'name' => $this->getName(),
+            'year' => $this->getYear(),
+            'image' => $this->getImage(),
+            'genres' => json_encode($this->getGenres())
+        ];
+    }
 }

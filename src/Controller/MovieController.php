@@ -10,6 +10,7 @@ namespace Controller;
 
 
 use Model\Repository\MovieRepository;
+use Util\HTTP\JsonResponse;
 
 class MovieController
 {
@@ -27,11 +28,11 @@ class MovieController
 
     public function getAll()
     {
-        return $this->movieRepository->findAll('USER');
+        return new JsonResponse($this->movieRepository->findAll());
     }
 
     public function getOneById(int $id)
     {
-        echo "MovieController->getOneById(int $id)";
+        return new JsonResponse($this->movieRepository->find($id));
     }
 }

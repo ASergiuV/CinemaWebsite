@@ -36,7 +36,7 @@ abstract class Repository
      *
      * @return bool
      */
-    public function multiInsertOnDuplicate($data, $tableName)
+    public function multiInsertOnDuplicate(array $data, string $tableName)
     {
         // sanity check: do we have data to insert?
         if (empty($data)) {
@@ -97,7 +97,7 @@ abstract class Repository
      *
      * @return bool
      */
-    public function multiInsert($data, $tableName)
+    public function multiInsert(array $data, string $tableName)
     {
         // sanity check: do we have data to insert?
         if (empty($data)) {
@@ -147,7 +147,7 @@ abstract class Repository
      *
      * @return array
      */
-    public function find($id, $tableName)
+    public function find(int $id, string $tableName)
     {
         $stmt = $this->connection->query("SELECT * FROM $tableName WHERE id = " . $this->connection->quote((int)$id) . "
         ");
@@ -156,7 +156,7 @@ abstract class Repository
         return $stmt->fetchAll();
     }
 
-    public function findAll($tableName)
+    public function findAll(string $tableName)
     {
         $stmt = $this->connection->prepare("SELECT * FROM $tableName");
         $stmt->execute();
