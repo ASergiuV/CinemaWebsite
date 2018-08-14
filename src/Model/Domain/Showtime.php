@@ -16,19 +16,30 @@ class Showtime
     private $id;
     private $datetime;
     private $movie;
+    private $room;
 
     /**
      * Showtime constructor.
      *
-     * @param $id
-     * @param $datetime
-     * @param $movie
+     * @param int $id
+     * @param DateTime $datetime
+     * @param Movie $movie
+     * @param Room $room
      */
-    public function __construct(int $id,DateTime $datetime, Movie $movie)
+    public function __construct(int $id, DateTime $datetime, Movie $movie, Room $room)
     {
         $this->id       = $id;
         $this->datetime = $datetime;
         $this->movie    = $movie;
+        $this->room     = $room;
+    }
+
+    /**
+     * @return Room
+     */
+    public function getRoom() : Room
+    {
+        return $this->room;
     }
 
     /**

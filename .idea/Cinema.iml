@@ -5,7 +5,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Server" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/web-src" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/AdminScripts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />

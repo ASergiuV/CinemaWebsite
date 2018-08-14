@@ -107,8 +107,11 @@ class Application
                 session_start();
                 //require 'web-src/home.html';
                 header('Location: http://www.cinema.local/');
-
             }
+            echo "<script>
+                alert('Password or email is invalid');
+                </script>";
+            header('Refresh: 0; URL=http://www.cinema.local/login');
 
             return;
         }
