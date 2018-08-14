@@ -71,9 +71,9 @@ class UserController
      */
     public function addUser($email, $password)
     {
-        $this->userRepository->multiInsert([
+        $this->userRepository->multiInsert([[
             'email' => $email,
             'password' => $password
-        ], 'USER');
+        ]], 'USER');
     }
 }

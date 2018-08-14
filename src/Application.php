@@ -124,7 +124,7 @@ class Application
         }
         $this->userController->addUser($post['email'], $post['password']);
         session_start();
-        require 'web-src/home.html';
+        header('Location: http://www.cinema.local/');
 
     }
 }
