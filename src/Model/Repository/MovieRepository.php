@@ -21,16 +21,21 @@ class MovieRepository extends Repository
         $this->genreRepo = new GenreRepository($dbconn);
     }
 
-    public function findAll($tableName)
+    public function findAll($tableName = 'MOVIE')
     {
-        $movieArray  = parent::findAll($tableName);
-        $genreArray  = $this->genreRepo->findAll('GENRE');
-        $returnArray = [];
+        $movieArray      = parent::findAll($tableName);
+        $genreArray      = $this->genreRepo->findAll('GENRE');
+        $movieGenreArray = $this->genreRepo->findAll('GENRE_MOVIE');
+        $returnArray     = [];
         foreach ($movieArray as $movie) {
             $currentMovieGenre = [];
-            foreach ($genreArray as $genre) {
-                if (in_array($genre['id'], explode(',', $movie['genre']))) {
-                    $currentMovieGenre[] = $genre['name'];
+            foreach ($movieGenreArray as $movieGenre) {
+                if (in_array($movieGenre['movie_id'], explode(',', $movie['id']))) {
+                    foreach ($genreArray as $genre) {
+                        if ($genre['id'] === $movieGenre['genre_id']) {
+                            $currentMovieGenre[] = $genre['name'];
+                        }
+                    }
                 }
             }
             $returnArray[] = new Movie($movie['id'], $movie['name'], $movie['year'], $movie['image'],

@@ -11,7 +11,7 @@ namespace Model\Repository;
 
 use PDO;
 
-class Repository
+abstract class Repository
 {
 
 
