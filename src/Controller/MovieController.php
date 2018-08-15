@@ -9,12 +9,14 @@
 namespace Controller;
 
 
+use Model\Repository\GenreRepository;
 use Model\Repository\MovieRepository;
 use Util\HTTP\JsonResponse;
 
 class MovieController
 {
     private $movieRepository;
+    private $genreRepository;
 
     /**
      * MovieController constructor.
@@ -24,15 +26,21 @@ class MovieController
     public function __construct($dbconn)
     {
         $this->movieRepository = new MovieRepository($dbconn);
+        $this->genreRepository = new GenreRepository($dbconn);
     }
 
-    public function getAll()
+    public function getAll() : array
     {
-        return new JsonResponse($this->movieRepository->findAll());
+        return $this->movieRepository->findAll();
     }
 
-    public function getOneById(int $id)
+    public function getOneById(int $id) : JsonResponse
     {
         return new JsonResponse($this->movieRepository->find($id));
+    }
+
+    public function getAllGenres() : array
+    {
+        return $this->genreRepository->findAllAsArray();
     }
 }

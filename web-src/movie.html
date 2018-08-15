@@ -1,0 +1,23 @@
+<div class="img">
+    <img class="big-movie-img" src="<?php echo $movie->getImgURL(); ?>"/>
+</div>
+<div class="content">
+    <h2>
+        <?php echo $movie->getTitleText(); ?>
+    </h2>
+    <br/>
+    <h4>
+        <?php echo implode(', ', $movie->getGenres()); ?>
+    </h4>
+</div>
+
+<div class="screenings">
+    <h2>
+        Screenings Ahead
+    </h2>
+    <?php foreach ($screenings as $screening): ?>
+    <div class="screening">
+
+    </div>
+    <?php endforeach; ?>
+</div>

@@ -14,19 +14,30 @@ class Seat implements \JsonSerializable
     private $id;
     private $row;
     private $col;
+    private $isTaken;
 
     /**
      * Seat constructor.
      *
-     * @param $id
-     * @param $row
-     * @param $col
+     * @param int $id
+     * @param int $row
+     * @param int $col
+     * @param bool $isTaken
      */
-    public function __construct(int $id, int $row, int $col)
+    public function __construct(int $id, int $row, int $col, bool $isTaken)
     {
-        $this->id  = $id;
-        $this->row = $row;
-        $this->col = $col;
+        $this->id      = $id;
+        $this->row     = $row;
+        $this->col     = $col;
+        $this->isTaken = $isTaken;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isTaken() : bool
+    {
+        return $this->isTaken;
     }
 
     /**
@@ -65,7 +76,8 @@ class Seat implements \JsonSerializable
         return [
             'id' => $this->getId(),
             'row' => $this->getRow(),
-            'col' => $this->getCol()
+            'col' => $this->getCol(),
+            'isTaken' => $this->isTaken()
         ];
     }
 }

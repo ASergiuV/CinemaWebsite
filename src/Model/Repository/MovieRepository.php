@@ -24,8 +24,8 @@ class MovieRepository extends Repository
     public function findAll($tableName = 'MOVIE')
     {
         $movieArray      = parent::findAll($tableName);
-        $genreArray      = $this->genreRepo->findAll('GENRE');
-        $movieGenreArray = $this->genreRepo->findAll('GENRE_MOVIE');
+        $genreArray      = $this->genreRepo->findAllAsArray('GENRE');
+        $movieGenreArray = $this->genreRepo->findAllMovieGenres('GENRE_MOVIE');
         $returnArray     = [];
         foreach ($movieArray as $movie) {
             $currentMovieGenre = [];
@@ -49,8 +49,8 @@ class MovieRepository extends Repository
     public function find(int $id, $tableName = 'MOVIE')
     {
         $movieArray      = parent::find($id, $tableName);
-        $genreArray      = $this->genreRepo->findAll('GENRE');
-        $movieGenreArray = $this->genreRepo->findAll('GENRE_MOVIE');
+        $genreArray      = $this->genreRepo->findAllAsArray('GENRE');
+        $movieGenreArray = $this->genreRepo->findAllMovieGenres('GENRE_MOVIE');
         $returnArray     = [];
         foreach ($movieArray as $movie) {
             $currentMovieGenre = [];

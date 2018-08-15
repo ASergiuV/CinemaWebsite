@@ -1172,25 +1172,32 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="282" parent="235" name="SEAT_id_uindex">
+    <column id="282" parent="235" name="is_taken">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="283" parent="235" name="SEAT_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="283" parent="235" name="SEAT_ROOM_id_fk">
+    <index id="284" parent="235" name="SEAT_ROOM_id_fk">
       <ColNames>room_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="284" parent="235" name="PRIMARY">
+    <key id="285" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="285" parent="235" name="SEAT_id_uindex">
+    <key id="286" parent="235" name="SEAT_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>SEAT_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="286" parent="235" name="SEAT_ROOM_id_fk">
+    <foreign-key id="287" parent="235" name="SEAT_ROOM_id_fk">
       <ColNames>room_id</ColNames>
       <RefSchemaName>Cinema</RefSchemaName>
       <RefTableName>ROOM</RefTableName>
@@ -1198,54 +1205,54 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="287" parent="236" name="id">
+    <column id="288" parent="236" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="236" name="datetime">
+    <column id="289" parent="236" name="datetime">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="236" name="movie_id">
+    <column id="290" parent="236" name="movie_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="236" name="room_id">
+    <column id="291" parent="236" name="room_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="291" parent="236" name="SHOWTIME_id_uindex">
+    <index id="292" parent="236" name="SHOWTIME_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="292" parent="236" name="SHOWTIME_MOVIE_id_fk">
+    <index id="293" parent="236" name="SHOWTIME_MOVIE_id_fk">
       <ColNames>movie_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="293" parent="236" name="SHOWTIME_ROOM_id_fk">
+    <index id="294" parent="236" name="SHOWTIME_ROOM_id_fk">
       <ColNames>room_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="294" parent="236" name="PRIMARY">
+    <key id="295" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="295" parent="236" name="SHOWTIME_id_uindex">
+    <key id="296" parent="236" name="SHOWTIME_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>SHOWTIME_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="296" parent="236" name="SHOWTIME_MOVIE_id_fk">
+    <foreign-key id="297" parent="236" name="SHOWTIME_MOVIE_id_fk">
       <ColNames>movie_id</ColNames>
       <RefSchemaName>Cinema</RefSchemaName>
       <RefTableName>MOVIE</RefTableName>
@@ -1253,7 +1260,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="297" parent="236" name="SHOWTIME_ROOM_id_fk">
+    <foreign-key id="298" parent="236" name="SHOWTIME_ROOM_id_fk">
       <ColNames>room_id</ColNames>
       <RefSchemaName>Cinema</RefSchemaName>
       <RefTableName>ROOM</RefTableName>
@@ -1261,35 +1268,35 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="298" parent="237" name="id">
+    <column id="299" parent="237" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="237" name="email">
+    <column id="300" parent="237" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="237" name="password">
+    <column id="301" parent="237" name="password">
       <Position>3</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="301" parent="237" name="USER_id_uindex">
+    <index id="302" parent="237" name="USER_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="302" parent="237" name="PRIMARY">
+    <key id="303" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="303" parent="237" name="USER_id_uindex">
+    <key id="304" parent="237" name="USER_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>USER_id_uindex</UnderlyingIndexName>
     </key>

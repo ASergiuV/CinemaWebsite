@@ -3,6 +3,7 @@
 use Controller\MovieController;
 use Controller\UserController;
 use Util\EncryptionHandler;
+use View\View;
 
 /**
  * Created by PhpStorm.
@@ -29,6 +30,9 @@ class Application
 
     }
 
+    /**
+     * @throws Exception
+     */
     public function listen()
     {
         if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] === 'http://www.cinema.local/login') {
@@ -40,7 +44,7 @@ class Application
         }
         $pathArray = explode('/', trim($_SERVER['REQUEST_URI'], '/'));
         if (count($pathArray) === 1 && $pathArray[0] === '') {
-            require 'web-src/home.html';
+            echo View::render('web-src/home.phtml');
 
             return;
         }
@@ -51,19 +55,21 @@ class Application
             case 'movies':
                 $this->listenMovies($pathArray);
                 break;
-            case 'about':
-                require 'web-src/about.html';
-                break;
             case 'login':
-                require 'web-src/login.html';
+                echo View::render('web-src/login.html');
                 break;
             default:
-                require 'web-src/404.html';
+                echo View::render('web-src/404.html');
                 break;
         }
 
     }
 
+    /**
+     * @param array $pathArray
+     *
+     * @throws Exception
+     */
     private function listenUsers(array $pathArray)
     {
         switch (count($pathArray)) {
@@ -77,16 +83,27 @@ class Application
                 echo $this->userController->getOneById((int)$pathArray[1])->getContent();
                 break;
             default:
-                require 'web-src/404.html';
+                echo View::render('web-src/404.html');
                 break;
         }
     }
 
+    /**
+     * @param array $pathArray
+     *
+     * @throws Exception
+     */
     private function listenMovies(array $pathArray)
     {
         switch (count($pathArray)) {
             case 1:
-                echo $this->movieController->getAll()->getContent();
+                $output = View::render('web-src/movies.phtml', [
+                    "genre" => $this->movieController->getAllGenres(),
+                    "movies" => $this->movieController->getAll()
+                ]);
+                $output = View::render('web-src/home.phtml', ["containerContent" => $output]);
+                echo $output;
+                //echo $this->movieController->getAll()->getContent();
                 break;
             case 2:
                 if (!is_numeric($pathArray[1])) {
@@ -96,7 +113,7 @@ class Application
                 break;
 
             default:
-                require 'web-src/404.html';
+                echo View::render('web-src/404.html');
                 break;
         }
     }
@@ -106,9 +123,9 @@ class Application
         if (count($post) === 3) {
             if ($this->userController->checkEmailAndPassword($post['email'],
                 EncryptionHandler::encrypt($post['password']))) {
-                session_start();
+                session_start();//aici zice ca nu poate ca headerele au fost trimise
                 header('Location: http://www.cinema.local/');
-            }
+            }//$this->sendAlert('Password or email is invalid');
             echo "<script>
                 alert('Password or email is invalid');
                 </script>";
@@ -117,17 +134,13 @@ class Application
             return;
         }
         if ($this->userController->checkUserEmailExist($post['email'])) {
-            echo "<script>
-                alert('E-mail is already in use');
-                </script>";
+            $this->sendAlert('E-mail is already in use');
             header('Refresh: 0; URL=http://www.cinema.local/login');
 
             return;
         }
         if ($post['password'] !== $post['confirm-password']) {
-            echo "<script>
-                alert('Passwords do not match');
-                </script>";
+            $this->sendAlert('Passwords do not match');
             header('Refresh: 0; URL=http://www.cinema.local/login');
 
 
@@ -137,5 +150,12 @@ class Application
         session_start();
         header('Location: http://www.cinema.local/');
 
+    }
+
+    private function sendAlert(string $alertMessage)
+    {
+        echo "<script>
+                alert($alertMessage);
+                </script>";
     }
 }

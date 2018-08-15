@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cinema.local/web-src/CSS/style.css">
+
+</head>
+<body>
+<div class="nav-bar">
+    <a href="/movies/">
+        <button>
+            Movies
+        </button>
+    </a>
+    <a href="/">
+        <button>
+            Home
+        </button>
+    </a>
+    <a href="/login/">
+        <button id="right">
+            Login
+        </button>
+    </a>
+</div>
+<div class="container">
+    <?php if (!empty($containerContent)) {
+        echo $containerContent;
+    } ?>
+</div>
+</body>
+</html>
