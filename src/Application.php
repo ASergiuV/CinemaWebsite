@@ -97,6 +97,7 @@ class Application
     {
         switch (count($pathArray)) {
             case 1:
+                
                 $output = View::render('web-src/movies.phtml', [
                     "genre" => $this->movieController->getAllGenres(),
                     "movies" => $this->movieController->getAll()
