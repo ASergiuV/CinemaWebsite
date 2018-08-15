@@ -51,9 +51,6 @@ class Application
             case 'movies':
                 $this->listenMovies($pathArray);
                 break;
-            case 'about':
-                require 'web-src/about.html';
-                break;
             case 'login':
                 require 'web-src/login.html';
                 break;
@@ -86,10 +83,11 @@ class Application
     {
         switch (count($pathArray)) {
             case 1:
-                echo $this->movieController->getAll()->getContent();
+                require 'web-src/movies.html';
                 break;
             case 2:
-                if (!is_numeric($pathArray[1])) {
+                if (!is_numeric($pathArray[1]) && $pathArray[1] === 'all' && isset($_GET)) {
+                    echo $this->movieController->getAll()->getContent();
                     break;
                 }
                 echo $this->movieController->getOneById((int)$pathArray[1])->getContent();

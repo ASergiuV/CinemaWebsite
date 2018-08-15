@@ -19,7 +19,7 @@ class JsonResponse extends Response
      */
     public function __construct(array $content)
     {
-        parent::__construct(json_encode($content));
+        parent::__construct(json_encode($content, JSON_UNESCAPED_UNICODE));
     }
 
     /**
