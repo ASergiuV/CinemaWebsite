@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="eddef9f3-5029-4eab-ae01-30fb4e93ec26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MovieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MovieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Domain/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Domain/Movie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Repository/MovieRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Repository/MovieRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Repository/ShowtimeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Repository/ShowtimeRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web-src/JS/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-src/JS/movies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-src/movies.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-src/movies.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,50 +79,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovieRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Repository/MovieRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="987">
-              <caret line="148" selection-start-line="148" selection-end-line="148" />
-              <folding>
-                <element signature="e#1341#2298#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1b7752b9-d446-4102-8f5d-fec34caa7aa2/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
               <caret line="22" column="12" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonResponse.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/HTTP/JsonResponse.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Response.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Util/HTTP/Response.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/View.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -143,8 +100,8 @@
       <file leaf-file-name="movies.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-src/movies.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+            <state relative-caret-position="126">
+              <caret line="9" column="22" selection-start-line="9" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -152,12 +109,13 @@
       <file leaf-file-name="Application.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="169" selection-start-line="169" selection-end-line="169" />
+            <state relative-caret-position="409">
+              <caret line="84" column="38" lean-forward="true" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
               <folding>
                 <element signature="e#7#38#0#PHP" expanded="true" />
                 <element signature="e#99#189#0#PHP" expanded="true" />
                 <element signature="e#275#386#0#PHP" expanded="true" />
+                <element signature="n#handleLoginSubmit#0;n#Application#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -166,8 +124,8 @@
       <file leaf-file-name="MovieController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/MovieController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+            <state relative-caret-position="220">
+              <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
               <folding>
                 <element signature="e#122#159#0#PHP" expanded="true" />
                 <element signature="e#248#324#0#PHP" expanded="true" />
@@ -176,14 +134,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="movies.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-src/JS/movies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="74" selection-end-line="102" />
+            <state relative-caret-position="525">
+              <caret line="29" column="88" lean-forward="true" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
               <folding>
-                <element signature="e#43#714#0" />
+                <element signature="e#73#201#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MOVIE" pinned="false" current-in-tab="false">
+        <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/MOVIE">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GENRE_MOVIE" pinned="false" current-in-tab="true">
+        <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/GENRE_MOVIE">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="movie.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-src/movie.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -193,8 +178,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -210,10 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app.php" />
-        <option value="$PROJECT_DIR$/src/Util/app.php" />
-        <option value="$PROJECT_DIR$/src/Util/Application.php" />
-        <option value="$PROJECT_DIR$/src/View/404.html" />
         <option value="$PROJECT_DIR$/config/routes.php" />
         <option value="$PROJECT_DIR$/config/Database.php" />
         <option value="$PROJECT_DIR$/src/Util/Router.php" />
@@ -256,11 +237,15 @@
         <option value="$PROJECT_DIR$/web-src/CSS/movies.css" />
         <option value="$PROJECT_DIR$/src/Model/Repository/ShowtimeRepository.php" />
         <option value="$PROJECT_DIR$/src/Controller/MovieController.php" />
-        <option value="$PROJECT_DIR$/src/Model/Repository/MovieRepository.php" />
-        <option value="$PROJECT_DIR$/web-src/JS/movies.js" />
-        <option value="$PROJECT_DIR$/src/Application.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1b7752b9-d446-4102-8f5d-fec34caa7aa2/console.sql" />
         <option value="$PROJECT_DIR$/web-src/movies.html" />
+        <option value="$PROJECT_DIR$/web-src/CSS/movie.js" />
+        <option value="$PROJECT_DIR$/web-src/JS/movie.js" />
+        <option value="$PROJECT_DIR$/web-src/CSS/movie.css" />
+        <option value="$PROJECT_DIR$/src/Model/Repository/MovieRepository.php" />
+        <option value="$PROJECT_DIR$/web-src/movie.html" />
+        <option value="$PROJECT_DIR$/src/Application.php" />
+        <option value="$PROJECT_DIR$/web-src/JS/movies.js" />
       </list>
     </option>
   </component>
@@ -314,36 +299,6 @@
             <path>
               <item name="Cinema" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cinema" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cinema" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cinema" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cinema" type="b2602c69:ProjectViewProjectNode" />
@@ -445,7 +400,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77224000" />
+    <option name="totallyTimeSpent" value="83545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
@@ -458,12 +413,12 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962137" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.20044543" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4993498" visible="true" weight="0.22129783" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4993498" visible="true" weight="0.22129783" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.281198" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.281198" />
       <window_info id="Structure" order="1" sideWeight="0.50065017" side_tool="true" weight="0.21852468" />
       <window_info id="Favorites" order="2" sideWeight="0.50065017" side_tool="true" weight="0.21852468" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44209355" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.44209355" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -501,7 +456,7 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="51" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -524,28 +479,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/movieAPI.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdminScripts/readCSV.php" />
-    <entry file="file://$PROJECT_DIR$/AdminScripts/GenreUploader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AdminScripts/MovieUploader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdminScripts/ShowtimeUploader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -725,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/MOVIE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-src/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -746,13 +672,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/GENRE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/GENRE_MOVIE">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -828,32 +747,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.php">
+    <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/SHOWTIME">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-src/CSS/movie.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-src/CSS/movie.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-src/JS/movie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
-          <folding>
-            <element signature="e#7#38#0#PHP" expanded="true" />
-            <element signature="e#99#189#0#PHP" expanded="true" />
-            <element signature="e#275#386#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="84">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="316">
           <caret line="323" selection-start-line="323" selection-end-line="323" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/MovieController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="220">
+          <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
           <folding>
             <element signature="e#122#159#0#PHP" expanded="true" />
             <element signature="e#248#324#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Repository/MovieRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="103" column="43" lean-forward="true" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+          <folding>
+            <element signature="e#1341#2298#0#PHP" />
           </folding>
         </state>
       </provider>
@@ -865,37 +802,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/SHOWTIME">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/web-src/movie.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Repository/MovieRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="409">
+          <caret line="84" column="38" lean-forward="true" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
           <folding>
-            <element signature="e#1341#2298#0#PHP" />
+            <element signature="e#7#38#0#PHP" expanded="true" />
+            <element signature="e#99#189#0#PHP" expanded="true" />
+            <element signature="e#275#386#0#PHP" expanded="true" />
+            <element signature="n#handleLoginSubmit#0;n#Application#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-src/movies.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="34" column="49" lean-forward="true" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+        <state relative-caret-position="126">
+          <caret line="9" column="22" selection-start-line="9" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web-src/JS/movies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="74" selection-end-line="102" />
+        <state relative-caret-position="525">
+          <caret line="29" column="88" lean-forward="true" selection-start-line="29" selection-start-column="88" selection-end-line="29" selection-end-column="88" />
           <folding>
-            <element signature="e#43#714#0" />
+            <element signature="e#73#201#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/MOVIE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1b7752b9-d446-4102-8f5d-fec34caa7aa2/schema/Cinema/table/GENRE_MOVIE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

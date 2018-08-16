@@ -4,6 +4,8 @@ $(document).ready(function () {
             return self.indexOf(value) === index;
         });
     }
+
+
     $.ajax({
         type: 'GET',
         url: '/movies/all',
@@ -16,8 +18,8 @@ $(document).ready(function () {
             var yearSelector = $('#yearSelector');
             genreSelector.empty();
             yearSelector.empty();
-            genreSelector.append("<option selected disabled>All</option>");
-            yearSelector.append("<option selected disabled>All</option>");
+            genreSelector.append("<option>All</option>");
+            yearSelector.append("<option>All</option>");
             $(table).empty();
             var selectGenreValues = [];
             var selectYearValues = [];
@@ -25,7 +27,7 @@ $(document).ready(function () {
             $.each(data, function (idx, elem) {
                 table.append("<tr><td>" + elem.movie.name +
                     "</td><td>" + elem.movie.year + "</td>   <td><img src='" +
-                    elem.movie.image + "'></td>" +
+                    elem.movie.image + "' alt='Movie Image' onclick='" + "alert(this.src);" + "'></td>" +
                     "<td>" + elem.movie.genres + "</td><td><ol>" +
                     elem.showtime.reduce(function (total, currentValue) {
                         return total + "<li>" + currentValue + "</li>";
@@ -67,8 +69,6 @@ $(document).ready(function () {
                 console.log(data);
 
                 var table = $("#table tbody");
-                var genreSelector = $('#genreSelector');
-                var yearSelector = $('#yearSelector');
                 $(table).empty();
                 var selectGenreValues = [];
                 var selectYearValues = [];
@@ -98,5 +98,6 @@ $(document).ready(function () {
             }
         });
     });
-});
 
+
+});

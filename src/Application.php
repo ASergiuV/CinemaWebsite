@@ -76,10 +76,13 @@ class Application
                 $this->listenMovies($pathArray);
                 break;
             case 'filters':
-                $this->listenFilters($pathArray);
+                $this->listenFilters();
                 break;
             case 'login':
                 require 'web-src/login.html';
+                break;
+            case 'movie':
+                require 'web-src/movie.html';
                 break;
             default:
                 require 'web-src/404.html';

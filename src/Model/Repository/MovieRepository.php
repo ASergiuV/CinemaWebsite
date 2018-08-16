@@ -101,6 +101,9 @@ class MovieRepository extends Repository
             'date'
         ];
         foreach ($filters as $filter) {
+            if ($_GET[$filter] === 'All') {
+                continue;
+            }
             if ($firstIsSet === false && !empty($_GET[$filter])) {
                 $sql        = "SELECT * FROM ($sql) AS unfiltered WHERE $filter LIKE {$pdo->quote("%$_GET[$filter]%")}";
                 $firstIsSet = true;
