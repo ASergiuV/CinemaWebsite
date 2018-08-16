@@ -135,7 +135,7 @@ class Application
             if ($this->userController->checkEmailAndPassword($post['email'],
                 EncryptionHandler::encrypt($post['password']))) {
                 session_start();
-                header('Location: http://www.cinema.local/');
+                header('Location: http://www.cinema.local/movies');
             }
             echo "<script>
                 alert('Password or email is invalid');
@@ -163,7 +163,7 @@ class Application
         }
         $this->userController->addUser($post['email'], EncryptionHandler::encrypt($post['password']));
         session_start();
-        header('Location: http://www.cinema.local/');
+        header('Location: http://www.cinema.local/movies');
 
     }
 
