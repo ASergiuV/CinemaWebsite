@@ -12,11 +12,38 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+            integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i"
+            crossorigin="anonymous"></script>
+
     <script src="web-src/JS/movies.js"></script>
+
+    <link href="web-src/CSS/movies.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 <div class="conatiner">
+    <div class="filters">
+        <div class="form">
+            <form action="/filters" method="get" id="myFormId">
+                <label for="genreSelector">Genre</label>
+                <select name="genre" id="genreSelector">
+                </select>
+                <label for="yearSelector">Year</label>
+                <select name="year" id="yearSelector">
+                </select>
+                <label for="showtime">Showtime after</label>
+                <input type="date" name="date" value="" id="showtime">
+                <label for="sort">Sort by year</label>
+                <select name="sort_by_release" id="sort">
+                    <option selected disabled></option>
+                    <option value="ASC">Release Date Asc</option>
+                    <option value="DESC">Release Date Desc</option>
+                </select>
+                <input type="submit" value="Filter">
+            </form>
+        </div>
+    </div>
     <table class="table" id="table">
         <thead>
         <tr>
@@ -24,11 +51,10 @@
             <th width="100">Year</th>
             <th width="100">Image</th>
             <th width="100">Genre</th>
+            <th width="100">Showtimes</th>
         </tr>
         </thead>
         <tbody>
-        <script>
-        </script>
         </tbody>
     </table>
 </div>

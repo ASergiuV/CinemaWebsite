@@ -26,13 +26,19 @@ class MovieController
         $this->movieRepository = new MovieRepository($dbconn);
     }
 
-    public function getAll()
+    public function getAll() : JsonResponse
     {
         return new JsonResponse($this->movieRepository->findAll());
     }
 
-    public function getOneById(int $id)
+    public function getOneById(int $id) : JsonResponse
     {
         return new JsonResponse($this->movieRepository->find($id));
     }
+
+    public function getAllFiltered() : JsonResponse
+    {
+        return new JsonResponse($this->movieRepository->findAllFiltered());
+    }
+
 }

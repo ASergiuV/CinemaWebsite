@@ -90,7 +90,7 @@ class Movie implements \JsonSerializable
             'name' => $this->getName(),
             'year' => $this->getYear(),
             'image' => $this->getImage(),
-            'genres' => json_encode($this->getGenres(), JSON_UNESCAPED_UNICODE)
+            'genres' => implode(',', $this->getGenres())
         ];
     }
 }

@@ -1,0 +1,13 @@
+img {
+    width: 250px; /* you can use % */
+    height: auto;
+}
+
+ol {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+li {
+    flex: 0 0 auto;
+}

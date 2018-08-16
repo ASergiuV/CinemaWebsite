@@ -29,6 +29,28 @@ class Application
 
     }
 
+    /**
+     * Returns a one-dimensional array from an array of any depth
+     *
+     * @param $tokens
+     *
+     * @return array
+     */
+    private function flattenArray($tokens)
+    {
+        $flattenedToken = [];
+        $count          = 0;
+        $it             = new RecursiveIteratorIterator(new RecursiveArrayIterator($tokens));
+
+        foreach ($it as $v) {
+            $flattenedToken[$count] = $v;
+            $count++;
+            $tokens = $flattenedToken;
+        }
+
+        return $tokens;
+    }
+
     public function listen()
     {
         if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] === 'http://www.cinema.local/login') {
@@ -44,12 +66,17 @@ class Application
 
             return;
         }
+        $pathArray[0] = explode('?', $pathArray[0]);
+        $pathArray    = $this->flattenArray($pathArray);
         switch ($pathArray[0]) {
             case 'users':
                 $this->listenUsers($pathArray);
                 break;
             case 'movies':
                 $this->listenMovies($pathArray);
+                break;
+            case 'filters':
+                $this->listenFilters($pathArray);
                 break;
             case 'login':
                 require 'web-src/login.html';
@@ -135,5 +162,11 @@ class Application
         session_start();
         header('Location: http://www.cinema.local/');
 
+    }
+
+    private function listenFilters()
+    {
+        $response = $this->movieController->getAllFiltered()->getContent();
+        echo $response;
     }
 }
